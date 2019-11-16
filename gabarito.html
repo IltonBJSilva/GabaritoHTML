@@ -1,0 +1,233 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <form id="formQuest">
+        <input type="hidden" id="tbvalue" />
+    </form> 
+        <h1>QUESTÃO-1</h1>
+        <input type="radio" name="gabarito1" onchange="onchangeGeral()" value="A" > A<br>
+        <input type="radio" name="gabarito1" onchange="onchangeGeral()" value="B"> B<br>
+        <input type="radio" name="gabarito1" onchange="onchangeGeral()" value="C"> C<br>
+        <input type="radio" name="gabarito1" onchange="onchangeGeral()" value="D"> D<br><br>
+
+        <h1>QUESTÃO-2</h1>
+        <input type="radio" name="gabarito2" onchange="onchangeGeral()"   value="A" > A<br>
+        <input type="radio" name="gabarito2" onchange="onchangeGeral()"   value="B"> B<br>
+        <input type="radio" name="gabarito2" onchange="onchangeGeral()"   value="C"> C<br>
+        <input type="radio" name="gabarito2" onchange="onchangeGeral()"   value="D"> D<br><br>
+
+        <h1>QUESTÃO-3</h1>
+        <input type="radio" name="gabarito3" onchange="onchangeGeral()"   value="A" > A<br>
+        <input type="radio" name="gabarito3" onchange="onchangeGeral()"   value="B"> B<br>
+        <input type="radio" name="gabarito3" onchange="onchangeGeral()"   value="C"> C<br>
+        <input type="radio" name="gabarito3" onchange="onchangeGeral()"   value="D"> D<br><br>
+
+        <h1>QUESTÃO-4</h1>
+        <input type="radio" name="gabarito4" onchange="onchangeGeral()"   value="A" > A<br>
+        <input type="radio" name="gabarito4" onchange="onchangeGeral()"   value="B"> B<br>
+        <input type="radio" name="gabarito4" onchange="onchangeGeral()"   value="C"> C<br>
+        <input type="radio" name="gabarito4" onchange="onchangeGeral()"   value="D"> D<br><br>
+
+        <h1>QUESTÃO-5</h1>
+        <input type="radio" name="gabarito5" onchange="onchangeGeral()"   value="A" > A<br>
+        <input type="radio" name="gabarito5" onchange="onchangeGeral()"   value="B"> B<br>
+        <input type="radio" name="gabarito5" onchange="onchangeGeral()"   value="C"> C<br>
+        <input type="radio" name="gabarito5" onchange="onchangeGeral()"   value="D"> D<br><br>
+
+        <h1>QUESTÃO-6</h1>
+        <input type="radio" name="gabarito6" onchange="onchangeGeral()"   value="A" > A<br>
+        <input type="radio" name="gabarito6" onchange="onchangeGeral()"   value="B"> B<br>
+        <input type="radio" name="gabarito6" onchange="onchangeGeral()"   value="C"> C<br>
+        <input type="radio" name="gabarito6" onchange="onchangeGeral()"   value="D"> D<br><br>
+
+        <h1>QUESTÃO-7</h1>
+        <input type="radio" name="gabarito7" onchange="onchangeGeral()"   value="A" > A<br>
+        <input type="radio" name="gabarito7" onchange="onchangeGeral()"   value="B"> B<br>
+        <input type="radio" name="gabarito7" onchange="onchangeGeral()"   value="C"> C<br>
+        <input type="radio" name="gabarito7" onchange="onchangeGeral()"   value="D"> D<br><br>
+
+        <h1>QUESTÃO-8</h1>
+        <input type="radio" name="gabarito8" onchange="onchangeGeral()"   value="A" > A<br>
+        <input type="radio" name="gabarito8" onchange="onchangeGeral()"   value="B"> B<br>
+        <input type="radio" name="gabarito8" onchange="onchangeGeral()"   value="C"> C<br>
+        <input type="radio" name="gabarito8" onchange="onchangeGeral()"   value="D"> D<br><br>
+
+        <h1>QUESTÃO-9</h1>
+        <input type="radio" name="gabarito9" onchange="onchangeGeral()"   value="A" > A<br>
+        <input type="radio" name="gabarito9" onchange="onchangeGeral()"   value="B"> B<br>
+        <input type="radio" name="gabarito9" onchange="onchangeGeral()"   value="C"> C<br>
+        <input type="radio" name="gabarito9" onchange="onchangeGeral()"   value="D"> D<br><br>
+
+        <h1>QUESTÃO-10</h1>
+        <input type="radio" name="gabarito10" onchange="onchangeGeral()"  value="A" > A<br>
+        <input type="radio" name="gabarito10" onchange="onchangeGeral()"  value="B"> B<br>
+        <input type="radio" name="gabarito10" onchange="onchangeGeral()"  value="C"> C<br>
+        <input type="radio" name="gabarito10" onchange="onchangeGeral()"  value="D"> D<br><br>
+
+        <button onclick="testaRespostas()"> Ola Sou um boão de Enviar</button>
+      
+      <script>
+        var respostas = [9];
+    
+        var form = document.getElementById('formulario');
+        var campo = document.getElementById('campo');
+
+        var valor = {
+            gabarito10 : '-',
+            gabarito9 : '-',
+            gabarito8 : '-',
+            gabarito7 : '-',
+            gabarito6 : '-',
+            gabarito5 : '-',
+            gabarito4 : '-',
+            gabarito3 : '-',
+            gabarito2 : '-',
+            gabarito1 : '-'
+        }
+
+        function testaRespostas()
+        {
+            // valida se foi respondido
+
+
+            var pontos = 0;
+
+            var respondido = 0;
+            if(valor.gabarito10 == '-')
+            {
+               return alert("Pergunta 10 não respondida");
+                
+            }else respondido = respondido +1;
+
+            if(valor.gabarito9 == '-')
+            {
+                return alert("Pergunta 9 não respondida");
+                
+            }else respondido = respondido +1;
+
+            if(valor.gabarito8 == '-')
+            {
+                return alert("Pergunta 8 não respondida");
+                
+            }else respondido = respondido +1;
+
+            if(valor.gabarito7 == '-')
+            {
+                return alert("Pergunta 7 não respondida");
+                
+            }else respondido = respondido +1;
+
+            if(valor.gabarito6 == '-')
+            {
+                return alert("Pergunta 6 não respondida");
+                
+            }else respondido = respondido +1;
+
+            if(valor.gabarito5 == '-')
+            {
+                return alert("Pergunta 5 não respondida");
+                
+            }else respondido = respondido +1;
+
+            if(valor.gabarito4 == '-')
+            {
+                return alert("Pergunta 4 não respondida");
+                
+            }else respondido = respondido +1;
+
+            if(valor.gabarito3 == '-')
+            {
+                return alert("Pergunta 3 não respondida");
+                
+            }else respondido = respondido +1;
+
+            if(valor.gabarito2 == '-')
+            {
+                return alert("Pergunta 2 não respondida");
+                
+            }else respondido = respondido +1;
+
+            if(valor.gabarito1 == '-')
+            {
+                return alert("Pergunta 1 não respondida");
+                
+            }else respondido = respondido +1;
+               
+
+            pontos = pontos + (valor.gabarito10 == 'B' ? 1: 0);
+            pontos = pontos + (valor.gabarito9 == 'D' ? 1: 0);
+            pontos = pontos + (valor.gabarito8 == 'B' ? 1: 0);
+            pontos = pontos + (valor.gabarito7 == 'C' ? 1: 0);
+            pontos = pontos + (valor.gabarito6 == 'A' ? 1: 0);
+            pontos = pontos + (valor.gabarito5 == 'B' ? 1: 0);
+            pontos = pontos + (valor.gabarito4 == 'D' ? 1: 0);
+            pontos = pontos + (valor.gabarito3 == 'D' ? 1: 0);
+            pontos = pontos + (valor.gabarito2 == 'C' ? 1: 0);
+            pontos = pontos + (valor.gabarito1 == 'B' ? 1: 0);
+
+
+
+            if(respondido >= 6 && pontos >= 6)
+            {
+                alert("Passou");
+            }else if(pontos < 6) 
+            {
+                alert("morreu.");
+                
+            }
+
+            alert("total conseguido: "+ pontos);
+
+           /// document.getElementById("formQuest").submit();
+        }
+   
+        function onchangeGeral() {
+            if(event.target.name == 'gabarito10')
+            {
+                valor.gabarito10 = event.target.value;
+               
+            }else if(event.target.name == 'gabarito9')
+            {
+                valor.gabarito9 = event.target.value;
+            }else if(event.target.name == 'gabarito8')
+            {
+                valor.gabarito8 = event.target.value;
+            }else if(event.target.name == 'gabarito7')
+            {
+                valor.gabarito7 = event.target.value;
+            }else if(event.target.name == 'gabarito6')
+            {
+                valor.gabarito6 = event.target.value;
+            }else if(event.target.name == 'gabarito5')
+            {
+                valor.gabarito5 = event.target.value;
+            }else if(event.target.name == 'gabarito4')
+            {
+                valor.gabarito4 = event.target.value;
+            }else if(event.target.name == 'gabarito3')
+            {
+                valor.gabarito3 = event.target.value;
+            }else if(event.target.name == 'gabarito2')
+            {
+                valor.gabarito2 = event.target.value;
+            }else if(event.target.name == 'gabarito1')
+            {
+                valor.gabarito1 = event.target.value;
+            }
+           // event.preventDefault();
+        }
+
+        //form.addEventListener('submit', function(e) {
+        // alerta o valor do campo
+        //alert(campo.value);
+    
+        // impede o envio do form
+        //e.preventDefault();
+        //});
+    
+        </script>
+</body>
+</html>
